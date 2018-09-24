@@ -8,7 +8,9 @@
         <p>Go to <a href = "cIndex.html">Main page</a> to check the list of other parts of C study.</p>
         <h2>Fundamentals of C</h2>
         <p>The basic code names and the functions of C; functions for basic input/output, easy expressions and the words that are used in C.</p>
-        <h3>Basic structure</h3>
+        <h3 style=margin-top:100px>
+        Basic structure
+        </h3>
         <p>To give a simple output of literal string, we use the function printf().
         Here we have the basic structure of a C program.</p>
         <img src = "hello.jpg" width = 50%>
@@ -17,5 +19,55 @@
         <p>As shown in the above image, \n had used in printf() function and before seeing how it would be shown on the console, let's check out what it means for the blue words at the top of the code. Basically they are <strong>Comments</strong> that the programmers use not to make an output on the console but to make some notes within the codes for the understanding sakes. There are 2 types; // and /**/. If we write /*Hello*/ then the word Hello becomes just a comment that effects nothing to the code. It doesn't matter of the lines and spaces but the comment must begin with /* and closed by */ or else if we don't close the comment, C understands everything after /* as comments. // is a new tech of C99 that makes an end of a comment automatically after a line's written. // is good for a short one-lined comment.</p>
         <img src = "punConsole.jpg" width = 50%>
         <p>This image clealy shows how \n works on the console screen.</p>
+        <h3 style=margin-top:100px>
+        Constant and Variable
+        </h3>
+        <ul>
+            <li>A constant means a value that can't be changed, like if we write printf("7 is the lucky number") then it doesn't change unless the programer changes the data.</li>
+            <li>A variable simply means <strong>a storage of data</strong> but it's called as a variable because unlike the constants, the values can be easily changed. As told a storage, whatever the values in the storage can be replaced by others at anytime.</li>
+        <p>To use any variable, we must understand the 3 things; types, declaration and assignment. There are basically 3 types of string; literal, integer and floating string but in this chapter we're going to deal with only numerical strings except literals. To make a variable of integer values, we need <strong>int</strong> and <strong>float</strong> for floating values; decimals.</p>
+        <h4 style=margin-top:30px>Declaration and Assignment</h4>
+            <p><strong>Declaration</strong> is the process to declare a variable that which type it belongs to. For example <u>int age;</u> declares the variable named 'age' that would contain an integer value and <u>float weight;</u> declares the variable named 'weight' with a decimal values.<br>
+            <strong>Assignment</strong> is the process to assign any value into a declared variable.<br>
+            int age;<br>
+            float weight;<br>
+            age = 33;<br>
+            weight = 65.5f;<br>
+            As shown above, firstly the variables must be declared and then assign any values.<br>
+            There are some important points to be considered before shifting to next studies;</p>
+            <ul>
+                <li>Till C89, the declarations had to be written before any kind of other statements but after C99, it doesn't really matter any more but of course, the assignment can't be progressed before the declaration as the variables must be defined first.</li>
+                <li>A floating value should better contain <strong>f</strong> at the end of the decimal value to avoid any kind of error.</li>
+                <li>Declaration and Assignment could be done together on the same line;<br>
+                int age = 33;<br>
+                float weight = 165.5f;</li>
+                <li>While we assign a value to a variable, inputing the value is called as <u>intialization</u> and the value is called an <u>intitializer</u>.</li>
+            <h4 style=margin-top:30px>Printing process</h4>
+                <p>Let's use the same variables that were used above; age & weight. Before printing any value, just remember the 2 things; <strong>%d and %f</strong>.</p>
+                <p>For an integer variable; age, the code must be like below,<br>
+                    <strong>printf("age: %d\n", age);</strong><br>
+                age: is just a literal string and %d is a keyword that calls integer value of age; 33.</p>
+                <p>For a floating variable; weight, it's like below,<br>
+                    <strong>printf("weight: %f\n", weight);</strong><br>
+                weight: is just a literal string as well and %f is a keyword that calls floating value of weight; 165.5.</p>
+            <h4 style=margin-top:30px>Basic expression</h4>
+            <p>Not only a single value but it's possible to assign an expressions to a variable; basic calculations.<br>
+            int cal1 = 1 * 2 + 4 - 2;<br>
+            float cal2 = 50 / 2:<br>
+            The computer calcuates these expressions and saves the values into the variables. If these values were printed then the console screen will display the result of calculations instead of the expressions themselves.</p>
+            <h3 style=margin-top:100px>
+            Reading input
+            </h3>
+            <p>We had seen how to print any value on the screen but then now it's time to input a value on the screen directly instead of writing any value within the code.<br>
+            To do this, we use the function <strong>scanf()</strong> and a variable for it.<br>
+            int age = 33;<br>
+            float weight = 165.5f;<br>
+            printf("Enter your age: ");<br>
+            scanf("%d", &age);<br>
+            printg("Enter your weight: ");<br>
+            scanf("%f", &weight);<br>
+                Like the same way we did in printf of a variable, even in scanf we put <strong>%d or %f</strong> according to the type and put the name of the variable on the right side but must be careful not to miss "&" sign in front of the name.</p>
+            </ul>
+        </ul>
     </body>
 </html>
