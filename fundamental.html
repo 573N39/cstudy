@@ -1,73 +1,174 @@
 <!doctype html>
 <html>
     <head>
-        <title>cStudy/fundamental</title><meta charset = "utf-8">
+        <title>cStudy_Fundamental</title><meta charset = "utf-8">
     </head>
     <body>
         <h1>Let's study C</h1>
-        <p>Go to <a href = "cIndex.html">Main page</a> to check the list of other parts of C study.</p>
-        <h2>Fundamentals of C</h2>
-        <p>The basic code names and the functions of C; functions for basic input/output, easy expressions and the words that are used in C.</p>
-        <h3 style=margin-top:100px>
-        Basic structure
-        </h3>
-        <p>To give a simple output of literal string, we use the function printf().
-        Here we have the basic structure of a C program.</p>
-        <img src = "hello.jpg" width = 50%>
-        <p>The code has 'directive; standard input/output(#include<stdio.h>)', and the function int main(void), then the statement printf() where printf() is a function too but placed as a statment; a function-call. printf("Hello World") can show the literalstring Hello World on the console screen. A crucial part to know is that if it's just written printf("Hello World");, then the next words are continued on the same line instead of starting from the next, so we have to use \n to continue the next words from next line. For example, printf("Hello World\n");. Also, in statements we have to end most of the functions or expressiosn with a semicolon because it means a fullstop of a sentence to them.</p>
-        <img src = "badPun.jpg" width = 50%>
-        <p>As shown in the above image, \n had used in printf() function and before seeing how it would be shown on the console, let's check out what it means for the blue words at the top of the code. Basically they are <strong>Comments</strong> that the programmers use not to make an output on the console but to make some notes within the codes for the understanding sakes. There are 2 types; // and /**/. If we write /*Hello*/ then the word Hello becomes just a comment that effects nothing to the code. It doesn't matter of the lines and spaces but the comment must begin with /* and closed by */ or else if we don't close the comment, C understands everything after /* as comments. // is a new tech of C99 that makes an end of a comment automatically after a line's written. // is good for a short one-lined comment.</p>
-        <img src = "punConsole.jpg" width = 50%>
-        <p>This image clealy shows how \n works on the console screen.</p>
-        <h3 style=margin-top:100px>
-        Constant and Variable
-        </h3>
-        <ul>
-            <li>A constant means a value that can't be changed, like if we write printf("7 is the lucky number") then it doesn't change unless the programer changes the data.</li>
-            <li>A variable simply means <strong>a storage of data</strong> but it's called as a variable because unlike the constants, the values can be easily changed. As told a storage, whatever the values in the storage can be replaced by others at anytime.</li>
-        <p>To use any variable, we must understand the 3 things; types, declaration and assignment. There are basically 3 types of string; literal, integer and floating string but in this chapter we're going to deal with only numerical strings except literals. To make a variable of integer values, we need <strong>int</strong> and <strong>float</strong> for floating values; decimals.</p>
-        <h4 style=margin-top:30px>Declaration and Assignment</h4>
-            <p><strong>Declaration</strong> is the process to declare a variable that which type it belongs to. For example <u>int age;</u> declares the variable named 'age' that would contain an integer value and <u>float weight;</u> declares the variable named 'weight' with a decimal values.<br>
-            <strong>Assignment</strong> is the process to assign any value into a declared variable.<br>
-            int age;<br>
-            float weight;<br>
-            age = 33;<br>
-            weight = 65.5f;<br>
-            As shown above, firstly the variables must be declared and then assign any values.<br>
-            There are some important points to be considered before shifting to next studies;</p>
-            <ul>
-                <li>Till C89, the declarations had to be written before any kind of other statements but after C99, it doesn't really matter any more but of course, the assignment can't be progressed before the declaration as the variables must be defined first.</li>
-                <li>A floating value should better contain <strong>f</strong> at the end of the decimal value to avoid any kind of error.</li>
-                <li>Declaration and Assignment could be done together on the same line;<br>
+         <p>Go to <a href = "cIndex.html">Main page</a> to check the list of other parts of C study.</p>
+         <p>Go to the previous chapter: <a href="intro.html">Introduction</a></p>
+          
+        <h2 style=margin-top:100px>Fundamentals of C</h2>
+          <p>The basic code names and the functions of C; functions for basic input/output, easy expressions and the words that are used in C.</p>
+        
+            <h3 style=margin-top:50px>Basic structure</h3>
+        
+                <p>To give a simple output of literal string, we use the function printf().
+                Here we have the basic structure of a C program.</p>
+                <img src = "hello.jpg" width = 50%>
+                <p>The code has 'directive; standard input/output(#include<stdio.h>)', and the function int main(void), then the statement printf() where printf() is a function too but placed as a statment; a function-call. printf("Hello World") can show the literalstring Hello World on the console screen. A crucial part to know is that if it's just written printf("Hello World");, then the next words are continued on the same line instead of starting from the next, so we have to use \n to continue the next words from next line. For example, printf("Hello World\n");. Also, in statements we have to end most of the functions or expressiosn with a semicolon because it means a fullstop of a sentence to them.</p>
+                <img src = "badPun.jpg" width = 50%>
+                <p>As shown in the above image, \n had used in printf() function and before seeing how it would be shown on the console, let's check out what it means for the blue words at the top of the code. Basically they are <strong>Comments</strong> that the programmers use not to make an output on the console but to make some notes within the codes for the understanding sakes. There are 2 types; // and /**/. If we write /*Hello*/ then the word Hello becomes just a comment that effects nothing to the code. It doesn't matter of the lines and spaces but the comment must begin with /* and closed by */ or else if we don't close the comment, C understands everything after /* as comments. // is a new tech of C99 that makes an end of a comment automatically after a line's written. // is good for a short one-lined comment.</p>
+                <img src = "punConsole.jpg" width = 50%>
+                <p>This image clealy shows how \n works on the console screen.</p>
+        
+            <h3 style=margin-top:100px>Constant and Variable</h3>
+        
+                <ul>
+                    <li>A constant means a value that can't be changed, like if we write <u>printf("7 is the lucky number")</u> then it doesn't change unless the programer changes the data.</li>
+                    <li>A variable simply means <strong>a storage of data</strong> but it's called as a variable because unlike the constants, the values can be easily changed. As it's been told as a storage, whatever the values in the storage can be replaced by others at anytime.</li>
+                </ul>
+                <p>To use any variable, we must understand the 3 things; types, declaration and assignment. There are basically 3 types of string; literal, integer and floating string but in this chapter we're going to deal with only numerical strings except literals. To make a variable of integer values, we need <strong>int</strong> and <strong>float</strong> for floating values; decimals.</p>
+                    <h4 style=margin-top:30px>Declaration and Assignment</h4>
+                        <strong>Declaration</strong> is the process to declare a variable that which type it belongs to. For example <u>int age;</u> declares the variable named 'age' that would contain an integer value and <u>float weight;</u> declares the variable named 'weight' with a decimal values.<br>
+                        <strong>Assignment</strong> is the process to assign any value into a declared variable.<br>
+                        int age;<br>
+                        float weight;<br>
+                        age = 33;<br>
+                        weight = 65.5f;<br>
+                        <p>As shown above, firstly the variables must be declared and then assign any values.<br>
+                        There are some important points to be considered before shifting to next studies;</p>
+                        <ul>
+                            <li>Till C89, the declarations had to be written before any kind of other statements but after C99, it doesn't really matter any more but of course, the assignment can't be progressed before the declaration as the variables must be defined first.</li>
+                            <li>A floating value should better contain <strong>f</strong> at the end of the decimal value to avoid any kind of error.</li>
+                            <li>Declaration and Assignment could be done together on the same line;<br>
+                            int age = 33;<br>
+                            float weight = 165.5f;</li>
+                            <li>While we assign a value to a variable, inputing the value is called as <u>intialization</u> and the value is called an <u>intitializer</u>.</li>
+                        </ul>
+                     <h4 style=margin-top:30px>Printing process</h4>
+                        <p>Let's use the same variables that were used above; age & weight. Before printing any value, just remember the 2 things; <strong>%d and %f</strong>.</p>
+                        <p>For an integer variable; age, the code must be like below,<br>
+                            <strong>printf("age: %d\n", age);</strong><br>
+                        age: is just a literal string and %d is a keyword that calls integer value of age; 33.</p>
+                        <p>For a floating variable; weight, it's like below,<br>
+                            <strong>printf("weight: %f\n", weight);</strong><br>
+                        weight: is just a literal string as well and %f is a keyword that calls floating value of weight; 165.5.</p>
+                     <h4 style=margin-top:30px>Basic expression</h4>
+                        <p>Not only a single value but it's possible to assign an expressions to a variable; basic calculations.<br>
+                        int cal1 = 1 * 2 + 4 - 2;<br>
+                        float cal2 = 50 / 2:<br>
+                        The computer calcuates these expressions and saves the values into the variables. If these values were printed then the console screen will display the result of calculations instead of the expressions themselves.</p>
+
+            <h3 style=margin-top:100px>Reading input</h3>
+
+                <p>We had seen how to print any value on the screen but then now it's time to input a value on the screen directly instead of writing any value within the code.<br>
+                To do this, we use the function <strong>scanf()</strong> and a variable for it.<br>
                 int age = 33;<br>
-                float weight = 165.5f;</li>
-                <li>While we assign a value to a variable, inputing the value is called as <u>intialization</u> and the value is called an <u>intitializer</u>.</li>
-            <h4 style=margin-top:30px>Printing process</h4>
-                <p>Let's use the same variables that were used above; age & weight. Before printing any value, just remember the 2 things; <strong>%d and %f</strong>.</p>
-                <p>For an integer variable; age, the code must be like below,<br>
-                    <strong>printf("age: %d\n", age);</strong><br>
-                age: is just a literal string and %d is a keyword that calls integer value of age; 33.</p>
-                <p>For a floating variable; weight, it's like below,<br>
-                    <strong>printf("weight: %f\n", weight);</strong><br>
-                weight: is just a literal string as well and %f is a keyword that calls floating value of weight; 165.5.</p>
-            <h4 style=margin-top:30px>Basic expression</h4>
-            <p>Not only a single value but it's possible to assign an expressions to a variable; basic calculations.<br>
-            int cal1 = 1 * 2 + 4 - 2;<br>
-            float cal2 = 50 / 2:<br>
-            The computer calcuates these expressions and saves the values into the variables. If these values were printed then the console screen will display the result of calculations instead of the expressions themselves.</p>
-            <h3 style=margin-top:100px>
-            Reading input
-            </h3>
-            <p>We had seen how to print any value on the screen but then now it's time to input a value on the screen directly instead of writing any value within the code.<br>
-            To do this, we use the function <strong>scanf()</strong> and a variable for it.<br>
-            int age = 33;<br>
-            float weight = 165.5f;<br>
-            printf("Enter your age: ");<br>
-            scanf("%d", &age);<br>
-            printg("Enter your weight: ");<br>
-            scanf("%f", &weight);<br>
+                float weight = 165.5f;<br>
+                printf("Enter your age: ");<br>   
+                scanf("%d", &age);<br>
+                printg("Enter your weight: ");<br>
+                scanf("%f", &weight);<br>
                 Like the same way we did in printf of a variable, even in scanf we put <strong>%d or %f</strong> according to the type and put the name of the variable on the right side but must be careful not to miss "&" sign in front of the name.</p>
-            </ul>
-        </ul>
+
+            <h3 style=margin-top:100px>Naming</h3>
+        
+                For a function, variable, macro etc... we need to give a name and there are few techniques to do that in C.<br>
+                To name a constant, we use <strong>macro definition</strong> with a preprocessing directive; #define.<br>
+                A constant requires a name when the same values have to be repeated over and over, or for the better fame of the name than the number, for example <strong>'pie = 3.14'</strong>.<br>
+                <strong>#define PIE 3.14</strong><br>
+                float f = PIE; //means same as float f = 3.14 (however it fails if we put f at the end)<br>
+                float ff = (PIE + 2) //a macro with any operation needs 'brackets'.<br>
+                When there's more than one word, for example a macro called 'double pie' then it'd be in this way: <strong>#define DOUBLE_PIE = 6.28</strong> where the space between the letters is filled by an underscope <strong>"_"</strong>.<br>
+                We have a small issue on a macro definition that they must be written in capitals for each letter not for the reasons like standard C, legal or illegal, errors etc.. but it's a general tradition of standard C programmers.<br>
+                <p>Now, the names of macro or a variable aren't called as 'names' but <strong>identifiers</strong>. The identifiers of variables even have the tradition similar to the macro definition that all the letters must be written in lower-case letters generally, and must not start with a number but always a literal character, with underscopes for any space.</p>
+                int elite = 31173;<br>
+                int lucky_number_seven = 7;<br>
+                <p>However from C99, another tradition have been used that, to write a capital instead of _. The identifier must begin with a lower-case and for the other letters too but only for the first letter of next word must be written in capital.</p>
+                int luckyNumberSeven = 7;
+                int number = 123;
+               <h4>Keywords</h4>
+                    <p>There are some <strong>keywords</strong> that help to process their promised <strong>functions</strong> so it's good to remember some keywords to use them, and to avoid using them for an identifier.</p>
+                    <table border="1">
+                        <thead><tr><th colspan="4">Keywords</th></tr></thead>
+                        <tbody>
+                        <tc>
+                            <td>
+                               <ul>
+                                   <li>auto</li>
+                                   <li>break</li>
+                                   <li>case</li>
+                                   <li>char</li>
+                                   <li>const</li>
+                                   <li>continue</li>
+                                   <li>default</li>
+                                   <li>do</li>
+                                   <li>double</li>
+                                   <li>else</li>
+                               </ul>
+                            </td>
+                        </tc>
+                        <tc>
+                            <td>
+                                <ul>
+                                    <li>enum</li>
+                                    <li>extern</li>
+                                    <li>float</li>
+                                    <li>for</li>
+                                    <li>goto</li>
+                                    <li>if</li>
+                                    <li>inline</li>
+                                    <li>int</li>
+                                    <li>long</li>
+                                    <li>register</li>
+                                </ul>
+                            </td>
+                        </tc>
+                        <tc>
+                            <td>
+                                <ul>
+                                    <li>restrict</li>
+                                    <li>return</li>
+                                    <li>short</li>
+                                    <li>signed</li>
+                                    <li>sizeof</li>
+                                    <li>static</li>
+                                    <li>struct</li>
+                                    <li>switch</li>
+                                    <li>typedef</li>
+                                    <li>union</li>
+                                </ul>
+                            </td>
+                        </tc>
+                        <tc>
+                            <td>
+                                <ul>
+                                    <li>unsigned</li>
+                                    <li>void</li>
+                                    <li>volatile</li>
+                                    <li>while</li>
+                                    <li>_Bool</li>
+                                    <li>_Complex</li>
+                                    <li>_Imaginary</li>
+                                </ul>
+                            </td>
+                        </tc>
+                        </tbody>
+                    </table>
+        
+            <h3 style=margin-top:100px>Basic Layout</h3>
+        
+                <p>To understand the basic layout structure of C, it might be good to consider about the <strong>tokens</strong> and <strong>spaces</strong>.</p>
+                    <table border="1">
+                    <thead><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></thead>
+                    <tbody><tc><td>printf</td><td>(</td><td>"age: %d\n"</td><td>,</td><td>age</td><td>)</td><td>;</td></tc></tbody>
+                    </table>
+            <p>As shown in the above table, a statement of printf function had devided into 7 parts where the parts aren't called as parts but <strong>tokens</strong>, which means that there are totally 7 tokens in above statement. A keyword like <u>printf</u> or a part that functions all together by one like <u>"age: %d\n"</u> are described as one token but things like ; or , are called as a token as  single.</p>
+            <p>There's a point to be cared about that for the sake of <u>"easy reading for the eyes"</u>, we can put any number of spaces between the tokens but <u>the spaces within a token must not be done!</u></p>
+            For example:<br>
+            printf  (  "%d\n"  ,  age  )  ; //This is allowed to make a number of spaces.<br>
+            print f ( "% d\n" , age ) ; //This is illegal to break any tokens with spaces. They surely cause some errors!<br>
     </body>
+    <footer style=margin-top:50px>Go to the next chapter: <a href="formNcs.html">Format & Conversion specifiers</a></footer>
 </html>
