@@ -7,7 +7,8 @@
             grid-template-columns: 5fr 1fr
         }
 }
-            article {border-right:3px solid cadetblue; padding:20px}
+            article {padding:20px}
+            nav {border: 3px solid grey}
             body {background-color: mintcream}
             h1 {background-color: cadetblue; color: white; text-align: center; font-size:50px}
             h2 {background-color: cadetblue; text-align: center; color:white; font-size: 32px; margin-bottom:0}
