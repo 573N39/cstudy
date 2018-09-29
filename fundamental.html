@@ -3,22 +3,21 @@
     <head>
         <title>C_Study</title><meta charset = "utf-8"><meta name="description" content="Study C Language">
         <meta name="keywords" content="coding,programming,C"><meta name="author" content="573N39">
-        <style>
-            body {background-color: mintcream}
-            h1 {background-color: cadetblue; color: white; text-align: center; font-size:50px}
-            h2 {background-color: cadetblue; color: white; font-size: 32px;}
-            h3 {color:slateblue; font-size: 30px}
-        </style>
+        <link rel="stylesheet" href="style4site.css">
     </head>
     <body>
        <header>
         <h1>Let's study C</h1>
        </header>
-         <p>Go to <a href = "cIndex.html">Main page</a> to check the list of other parts of C study.</p>
-         <p>Go to the previous chapter: <a href="intro.html">Introduction</a></p>
-          
-        <h2>Fundamentals of C</h2>
-          <p>The basic code names and the functions of C; functions for basic input/output, easy expressions and the words that are used in C.</p>
+       <time>
+        <p style="color: steelblue">Since Sep 23 2018</p>
+        <p style="color:darkgoldenrod">Last updated date: <u>28/09/2018</u></p>
+       </time>
+       
+        <h2>Fundamental</h2>
+        <div id="grid">
+        <article>
+        <p>The basic code names and the functions of C; functions for basic input/output, easy expressions and the words that are used in C.</p>
         
             <h3 style=margin-top:50px>Basic structure</h3>
         
@@ -41,10 +40,12 @@
                     <h4 style=margin-top:30px>Declaration and Assignment</h4>
                         <strong>Declaration</strong> is the process to declare a variable that which type it belongs to. For example <u>int age;</u> declares the variable named 'age' that would contain an integer value and <u>float weight;</u> declares the variable named 'weight' with a decimal values.<br>
                         <strong>Assignment</strong> is the process to assign any value into a declared variable.<br>
+                        <i>
                         int age;<br>
                         float weight;<br>
                         age = 33;<br>
                         weight = 65.5f;<br>
+                        </i>
                         <p>As shown above, firstly the variables must be declared and then assign any values.<br>
                         There are some important points to be considered before shifting to next studies;</p>
                         <ul>
@@ -65,20 +66,24 @@
                         weight: is just a literal string as well and %f is a keyword that calls floating value of weight; 165.5.</p>
                      <h4 style=margin-top:30px>Basic expression</h4>
                         <p>Not only a single value but it's possible to assign an expressions to a variable; basic calculations.<br>
+                        <i>
                         int cal1 = 1 * 2 + 4 - 2;<br>
                         float cal2 = 50 / 2:<br>
+                        </i>
                         The computer calcuates these expressions and saves the values into the variables. If these values were printed then the console screen will display the result of calculations instead of the expressions themselves.</p>
 
             <h3 style=margin-top:100px>Reading input</h3>
 
                 <p>We had seen how to print any value on the screen but then now it's time to input a value on the screen directly instead of writing any value within the code.<br>
                 To do this, we use the function <strong>scanf()</strong> and a variable for it.<br>
+                <i>
                 int age = 33;<br>
                 float weight = 165.5f;<br>
                 printf("Enter your age: ");<br>   
                 scanf("%d", &age);<br>
                 printg("Enter your weight: ");<br>
                 scanf("%f", &weight);<br>
+                </i>
                 Like the same way we did in printf of a variable, even in scanf we put <strong>%d or %f</strong> according to the type and put the name of the variable on the right side but must be careful not to miss "&" sign in front of the name.</p>
 
             <h3 style=margin-top:100px>Naming</h3>
@@ -176,8 +181,24 @@
             <p>As shown in the above table, a statement of printf function had devided into 7 parts where the parts aren't called as parts but <strong>tokens</strong>, which means that there are totally 7 tokens in above statement. A keyword like <u>printf</u> or a part that functions all together by one like <u>"age: %d\n"</u> are described as one token but things like ; or , are called as a token as  single.</p>
             <p>There's a point to be cared about that for the sake of <u>"easy reading for the eyes"</u>, we can put any number of spaces between the tokens but <u>the spaces within a token must not be done!</u></p>
             For example:<br>
+            <i>
             printf  (  "%d\n"  ,  age  )  ; //This is allowed to make a number of spaces.<br>
             print f ( "% d\n" , age ) ; //This is illegal to break any tokens with spaces. They surely cause some errors!<br>
+            </i>
+        </article>
+        <nav>
+          <h3 style=text-align:center;margin:0>Index</h3>
+           <ol>
+            <li><a href = "cIndex.html">Main page</a></li>
+            <li><a href = "intro.html">Introduction</a></li>
+            <li><a href = "fundamental.html">Fundamentals</a></li>
+            <li><a href="formatio.html">Formats of I/O</a></li>
+            <li><a href="expression.html">Expressions</a></li>
+            <li><a href="selection.html">Selection if/switch</a></li>
+            <li><a href="loop.html">Loop</a></li>
+           </ol>
+        </nav>
+        </div>
     </body>
-    <footer style=margin-top:50px>Go to the next chapter: <a href="formNcs.html">Format & Conversion specifiers</a></footer>
+    <footer style=text-align:right>573N39</footer>
 </html>
